@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        tools:context=".MainActivity">
+
+       <!-- КонтейнерИмеет небольшой отступ сверху и снизу
+       app:singleSelection = "true" - в рамках группы можно выбрать только 1 кнопку
+       app:singleSelection = "true" - в рамках группы можно выбирать все кнопки -->
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:singleSelection = "true">
+
+            <!--маргины и паддинги почему то не работают
+            Выбираем цвет при дефолте и выборе в отдельном файле в папке Color-->
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/color_toggle_background"
+                android:textColor="@color/black"
+                app:strokeColor = "@color/orange"
+                app:strokeWidth ="1dp"
+                android:text="@string/home"
+                style="?attr/materialButtonOutlinedStyle"/>
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/color_toggle_background"
+                android:textColor="@color/black"
+                app:strokeColor = "@color/orange"
+                app:strokeWidth ="1dp"
+                android:text="@string/shop"
+                style="?attr/materialButtonOutlinedStyle"/>
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/color_toggle_background"
+                android:textColor="@color/black"
+                app:strokeColor = "@color/orange"
+                app:strokeWidth ="1dp"
+                android:text="@string/reception"
+                style="?attr/materialButtonOutlinedStyle"/>
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <!--Кнопки с текстом и иконками-->
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggleButtonTextIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/toggleButton"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+            <Button
+                android:id="@+id/button11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/color_toggle_background"
+                android:textColor="@color/black"
+                app:strokeColor = "@color/black"
+                app:strokeWidth ="1dp"
+                app:iconTint = "@color/black"
+                android:text="@string/home"
+                app:icon="@drawable/play"
+                style="?attr/materialButtonOutlinedStyle"/>
+
+            <Button
+                android:id="@+id/button21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/color_toggle_background"
+                android:textColor="@color/black"
+                app:strokeColor = "@color/black"
+                app:strokeWidth ="1dp"
+                app:iconTint = "@color/black"
+                android:text="@string/shop"
+                app:icon="@drawable/play"
+                style="?attr/materialButtonOutlinedStyle"/>
+
+            <Button
+                android:id="@+id/button35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/color_toggle_background"
+                android:textColor="@color/black"
+                app:strokeColor = "@color/black"
+                app:strokeWidth ="1dp"
+                app:iconTint = "@color/black"
+                android:text="@string/reception"
+                app:icon="@drawable/play"
+                style="?attr/materialButtonOutlinedStyle"/>
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <!--Кнопки с иконками без текста
+        В теме указываем дополнительный код для СТАЙЛА-->
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggleUpButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/toggleButtonTextIcon"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/color_toggle_background"
+                app:strokeColor = "@color/black"
+                app:strokeWidth ="1dp"
+                app:iconTint = "@color/black"
+                app:icon="@drawable/play"
+                style="@style/Widget.App.Button.OutlinedButton.IconOnly"/>
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/color_toggle_background"
+                android:textColor="@color/black"
+                app:strokeColor = "@color/black"
+                app:strokeWidth ="1dp"
+                app:iconTint = "@color/black"
+                app:icon="@drawable/play"
+                style="@style/Widget.App.Button.OutlinedButton.IconOnly"/>
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/color_toggle_background"
+                android:textColor="@color/black"
+                app:strokeColor = "@color/black"
+                app:strokeWidth ="1dp"
+                app:iconTint = "@color/black"
+                app:icon="@drawable/play"
+                style="@style/Widget.App.Button.OutlinedButton.IconOnly"/>
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/toggleUpButton"
+            android:textColor="@color/white"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

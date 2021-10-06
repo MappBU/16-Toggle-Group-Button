@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Material Button Toggle Group</string>
+    <string name="textButton">TEXT BUTTON</string>
+    <string name="textButtonIcon">TEXT BUTTON ICON</string>
+    <string name="outlinedButton">OUTLINED BUTTON</string>
+    <string name="outlinedButtonIcon">OUTLINED BUTTON ICON</string>
+    <string name="containedButton">CONTAINED BUTTON</string>
+    <string name="containedButtonIcon">CONTAINED BUTTON ICON</string>
+    <string name="home">HOME</string>
+    <string name="shop">SHOP</string>
+    <string name="reception">RECEPTION</string>
+</resources>
